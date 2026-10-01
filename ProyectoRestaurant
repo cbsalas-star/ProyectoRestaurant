@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+</head>
+
+<body>
+    <nav>
+        <h1>Menu</h1>
+    </nav>
+    <section>
+        <h2>Platillos</h2>
+        <div> 
+            <div>
+            <h3><span style="color:rgb(217, 110, 16)">Pollo a la naranja</span>
+            </h3>
+            <article>
+                <img src="https://recetinas.com/pollo-a-la-naranja/" alt="Pollo a la naranja">
+                <p>Descripcion</p>
+                <p>Costo</p>
+            </article>
+            </div>
+
+            <div>
+            <h3><span style="color:rgb(217, 110, 16)">Chop suey</span>
+            </h3>
+            <article>
+                <img src="https://www.cocinadelirante.com/recetas/delicioso-chop-suey-como-en-la-comida-china-receta-con-o-sin-carne" alt="Chop suey">
+                <p>Descripcion</p>
+                <p>Costo</p>
+            </article>
+            </div>
+        </div>
+
+            
+    </section>
+    <footer></footer>
+</body>
+
+</html>
