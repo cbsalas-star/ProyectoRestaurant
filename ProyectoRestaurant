@@ -10,29 +10,64 @@
     </nav>
     <section>
         <h2>Platillos</h2>
-        <div> 
+        <div>
             <div>
-            <h3><span style="color:rgb(217, 110, 16)">Pollo a la naranja</span>
-            </h3>
-            <article>
-                <img src="https://recetinas.com/pollo-a-la-naranja/" alt="Pollo a la naranja">
-                <p>Descripcion</p>
-                <p>Costo</p>
-            </article>
+                <h3><span style="color:rgb(217, 110, 16)">Pollo a la naranja</span>
+                </h3>
+                <article>
+                    <img src="https://recetinas.com/pollo-a-la-naranja/" alt="Pollo a la naranja">
+                    <p>Descripcion</p>
+                    <p>Costo</p>
+                </article>
             </div>
 
             <div>
-            <h3><span style="color:rgb(217, 110, 16)">Chop suey</span>
-            </h3>
-            <article>
-                <img src="https://www.cocinadelirante.com/recetas/delicioso-chop-suey-como-en-la-comida-china-receta-con-o-sin-carne" alt="Chop suey">
-                <p>Descripcion</p>
-                <p>Costo</p>
-            </article>
+                <h3><span style="color:rgb(217, 110, 16)">Chop suey</span>
+                </h3>
+                <article>
+                    <img src="https://www.cocinadelirante.com/recetas/delicioso-chop-suey-como-en-la-comida-china-receta-con-o-sin-carne"
+                        alt="Chop suey">
+                    <p>Descripcion</p>
+                    <p>Costo</p>
+                </article>
             </div>
         </div>
+        <h3>Precios según el Tamaño</h3>
+        <table>
+            <tr>
+                <th>Tamaño</th>
+                <th>Porción</th>
+                <th>Precio</th>
+            </tr>
+            <tr>
+                <td>Chico (Individual)</td>
+                <td>1 Guisado + Arroz / Noodles</td>
+                <td>$95.00 MXN</td>
+            </tr>
+            <tr>
+                <td>Mediano (Doble)</td>
+                <td>2 Guisados + Arroz / Noodles</td>
+                <td>$150.00 MXN</td>
+            </tr>
+            <tr>
+                <td>Grande (Familiar)</td>
+                <td>3 Guisados + Arroz + Rollos Primavera</td>
+                <td>$260.00 MXN</td>
+            </tr>
+        </table>
 
-            
+    </section>
+    <section>
+        <h2 style="color: #b71c1c;">Bebidas</h2>
+
+        <!-- LISTA NO ORDENADA (Etiqueta <ul> y <li> vista en clase) -->
+        <ul class="bebidas-lista">
+            <li><strong>Té Verde Tradicional</strong> (Frío o Caliente) - $35.00 MXN</li>
+            <li><strong>Té de Jengibre y Limón</strong> - $40.00 MXN</li>
+            <li><strong>Refrescos de lata</strong> (Coca-Cola, Sprite, Fanta) - $30.00 MXN</li>
+            <li><strong>Agua de Jazmín</strong> (1 Litro) - $45.00 MXN</li>
+            <li><strong>Cerveza China Tsingtao</strong> - $65.00 MXN</li>
+        </ul>
     </section>
     <footer></footer>
 </body>
