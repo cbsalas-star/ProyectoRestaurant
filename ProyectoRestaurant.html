@@ -9,86 +9,149 @@
   <meta name="keywords" content="comida china, pollo a la naranja, chop suey">
   <meta name="author" content="Tu Nombre">
 
-  <!-- CDN de Bootstrap -->
+  <!-- CDN de Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="container my-3">
+<body>
 
-  <nav class="bg-danger text-white text-center p-2 mb-3">
-    <h1>Menú Dragón Dorado</h1>
+  <!-- a. NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Dragón Dorado</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Menú</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <!-- 1. ALERTA (<div class="alert">) -->
-  <div class="alert alert-warning" role="alert">
-    ¡Promoción! Obten 10% de descuento en tu consumo de hoy.
-  </div>
+  <div class="container my-4">
 
-  <section>
-    <h2>Platillos Principales</h2>
-
-    <!-- Contenedor flex para ponerlas una enseguida de otra -->
-    <div class="d-flex gap-3 flex-wrap">
-
-      <!-- Tarjeta 1 (Pollo a la naranja) -->
-      <div class="card" style="width: 18rem;">
-        <img src="https://recetinas.com/pollo-a-la-naranja/" class="card-img-top" alt="Pollo a la naranja">
-        <div class="card-body">
-          <h5 class="card-title">Pollo a la naranja</h5>
-          <p class="card-text">Crujientes trozos de pollo bañados en salsa agridulce de naranja.</p>
-          <button class="btn btn-danger">Ordenar</button>
+    <!-- b. CARRUSEL -->
+    <div id="carruselComida" class="carousel slide mb-4" data-bs-ride="carousel">
+      <div class="carousel-inner rounded">
+        <div class="carousel-item active">
+          <img src="https://recetinas.com/wp-content/uploads/2018/03/pollo-a-la-naranja.jpg" class="d-block w-100" alt="Pollo a la naranja" style="height: 300px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.cocinadelirante.com/350x250/media/cocinadelirante/chop-suey-receta.jpg" class="d-block w-100" alt="Chop suey" style="height: 300px; object-fit: cover;">
         </div>
       </div>
-
-      <!-- Tarjeta 2 (Chop suey) -->
-      <div class="card" style="width: 18rem;">
-        <img src="https://www.cocinadelirante.com/recetas/delicioso-chop-suey-como-en-la-comida-china-receta-con-o-sin-carne" class="card-img-top" alt="Chop suey">
-        <div class="card-body">
-          <h5 class="card-title">Chop suey</h5>
-          <p class="card-text">Verduras salteadas al Wok con filete de res o pollo.</p>
-          <button class="btn btn-danger">Ordenar</button>
-        </div>
-      </div>
-
+      <button class="carousel-control-prev" type="button" data-bs-target="#carruselComida" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carruselComida" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
 
-    <!-- Tabla original de precios -->
-    <h3>Precios según el Tamaño</h3>
-    <table class="table border">
-      <tr>
-        <th>Tamaño</th>
-        <th>Porción</th>
-        <th>Precio</th>
-      </tr>
-      <tr>
-        <td>Chico</td>
-        <td>1 Guisado + Arroz</td>
-        <td>$95.00 MXN</td>
-      </tr>
-      <tr>
-        <td>Mediano</td>
-        <td>2 Guisados + Arroz</td>
-        <td>$150.00 MXN</td>
-      </tr>
-      <tr>
-        <td>Grande</td>
-        <td>3 Guisados + Arroz</td>
-        <td>$260.00 MXN</td>
-      </tr>
-    </table>
-  </section>
+    <!-- Sección de Platillos -->
+    <section>
+      <h2>Platillos Principales</h2>
 
-  <!-- Lista original de bebidas -->
-  <section>
-    <h2>Bebidas</h2>
-    <ul>
-      <li>Té Verde Tradicional - $35.00 MXN</li>
-      <li>Té de Jengibre y Limón - $40.00 MXN</li>
-      <li>Refrescos de lata - $30.00 MXN</li>
-      <li>Agua de Jazmín - $45.00 MXN</li>
-      <li>Cerveza China Tsingtao - $65.00 MXN</li>
-    </ul>
-  </section>
+      <div class="d-flex gap-3 flex-wrap">
+
+        <!-- Tarjeta 1 (Abre el modal al presionar Ordenar) -->
+        <div class="card" style="width: 18rem;">
+          <img src="https://recetinas.com/wp-content/uploads/2018/03/pollo-a-la-naranja.jpg" class="card-img-top" alt="Pollo a la naranja">
+          <div class="card-body">
+            <h5 class="card-title">Pollo a la naranja</h5>
+            <p class="card-text">Crujientes trozos de pollo bañados en salsa agridulce de naranja.</p>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalOrdenar">
+              Ordenar
+            </button>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 (Abre el modal al presionar Ordenar) -->
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.cocinadelirante.com/350x250/media/cocinadelirante/chop-suey-receta.jpg" class="card-img-top" alt="Chop suey">
+          <div class="card-body">
+            <h5 class="card-title">Chop suey</h5>
+            <p class="card-text">Verduras salteadas al Wok con filete de res o pollo.</p>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalOrdenar">
+              Ordenar
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tabla de precios -->
+      <h3 class="mt-4">Precios según el Tamaño</h3>
+      <table class="table border">
+        <tr>
+          <th>Tamaño</th>
+          <th>Porción</th>
+          <th>Precio</th>
+        </tr>
+        <tr>
+          <td>Chico</td>
+          <td>1 Guisado + Arroz</td>
+          <td>$95.00 MXN</td>
+        </tr>
+        <tr>
+          <td>Mediano</td>
+          <td>2 Guisados + Arroz</td>
+          <td>$150.00 MXN</td>
+        </tr>
+        <tr>
+          <td>Grande</td>
+          <td>3 Guisados + Arroz</td>
+          <td>$260.00 MXN</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Lista de bebidas -->
+    <section>
+      <h2>Bebidas</h2>
+      <ul>
+        <li>Té Verde Tradicional - $35.00 MXN</li>
+        <li>Té de Jengibre y Limón - $40.00 MXN</li>
+        <li>Refrescos de lata - $30.00 MXN</li>
+        <li>Agua de Jazmín - $45.00 MXN</li>
+        <li>Cerveza China Tsingtao - $65.00 MXN</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <!-- c. MODAL -->
+  <div class="modal fade" id="modalOrdenar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Confirmar Pedido</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          ¿Deseas agregar este platillo a tu carrito de compras?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script JS de Bootstrap (Necesario para el carrusel, la navegación y el modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
